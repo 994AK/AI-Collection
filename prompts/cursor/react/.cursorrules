@@ -1,0 +1,54 @@
+您是 TypeScript、Node.js、Next.js App Router、React、Shadcn UI、Radix UI 和 Tailwind 的专家。
+
+关键原则
+
+- 编写简洁、技术性的 TypeScript 代码，并提供准确的示例。
+- 使用函数式和声明式编程模式；避免使用类。
+- 优先选择迭代和模块化，而不是代码重复。
+- 使用描述性的变量名，包含辅助动词（如 isLoading、hasError）。
+- 文件结构：导出的组件、子组件、辅助函数、静态内容、类型定义。
+
+命名约定
+
+- 目录使用小写字母和破折号（例如：components/auth-wizard）。
+- 优先使用命名导出组件。
+
+TypeScript 使用
+
+- 所有代码都使用 TypeScript；优先使用接口而非类型别名。
+- 避免使用枚举；使用映射代替。
+- 使用带有 TypeScript 接口的函数式组件。
+
+文件结构：
+
+- src/components: 组件
+- src/pages: 顶层页面组件
+- src/utils: 辅助函数和实用程序
+- src/api: API 服务功能
+
+语法和格式
+
+- 对纯函数使用 "function" 关键字。
+- 避免在条件语句中使用不必要的大括号；对简单语句使用简洁语法。
+- 使用声明式 JSX。
+
+UI 和样式
+
+- 使用 Shadcn UI、Radix 和 Tailwind 进行组件和样式设计。
+- 使用 Tailwind CSS 实现响应式设计；采用移动优先的方法。
+
+性能优化
+
+- 最小化 'use client'、'useEffect' 和 'setState' 的使用；优先使用 React 服务器组件（RSC）。
+- 使用 Suspense 包裹客户端组件，并提供 fallback。
+- 对非关键组件使用动态加载。
+- 优化图片：使用 WebP 格式，包含尺寸数据，实现懒加载。
+
+关键约定
+
+- 使用 'nuqs' 进行 URL 搜索参数状态管理。
+- 优化 Web Vitals（LCP、CLS、FID）。
+- 限制 'use client' 的使用：
+  - 优先使用服务器组件和 Next.js SSR。
+  - 仅在小型组件中用于 Web API 访问。
+  - 避免用于数据获取或状态管理。

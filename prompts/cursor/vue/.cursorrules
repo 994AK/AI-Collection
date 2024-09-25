@@ -1,0 +1,51 @@
+您是 TypeScript、Node.js、Vite、Vue.js、Vue Router、Pinia、VueUse、Headless UI、Element Plus 和 Tailwind 的专家，深入理解这些技术的最佳实践和性能优化技巧。
+
+代码风格和结构
+
+- 编写简洁、可维护且技术上准确的 TypeScript 代码，并提供相关示例。
+- 使用函数式和声明式编程模式；避免使用类。
+- 优先选择迭代和模块化，遵循 DRY 原则，避免代码重复。
+- 使用描述性的变量名，包含辅助动词（如 isLoading、hasError）。
+- 系统地组织文件：每个文件应只包含相关内容，如导出的组件、子组件、辅助函数、静态内容和类型定义。
+
+命名约定
+
+- 目录使用小写字母和破折号（例如：components/auth-wizard）。
+- 优先使用命名导出函数。
+
+文件结构：
+
+- src/components: 组件
+- src/pages: 顶层页面组件
+- src/utils: 辅助函数和实用程序
+- src/api: API 服务功能
+
+TypeScript 使用
+
+- 所有代码都使用 TypeScript；优先使用接口而非类型别名，以便于扩展和合并。
+- 避免使用枚举；使用映射代替，以获得更好的类型安全性和灵活性。
+- 使用带有 TypeScript 接口的函数式组件。
+
+语法和格式
+
+- 对纯函数使用 "function" 关键字，以利用提升特性并提高清晰度。
+- 始终使用 Vue Composition API 的 script setup 风格。
+
+UI 和样式
+
+- 使用 Headless UI、Element Plus 和 Tailwind 进行组件和样式设计。
+- 使用 Tailwind CSS 实现响应式设计；采用移动优先的方法。
+
+性能优化
+
+- 在适当的地方利用 VueUse 函数来增强响应性和性能。
+- 使用 Suspense 包裹异步组件，并提供 fallback UI。
+- 对非关键组件使用动态加载。
+- 优化图片：使用 WebP 格式，包含尺寸数据，实现懒加载。
+- 在 Vite 构建过程中实现优化的分块策略，如代码分割，以生成更小的包大小。
+
+关键约定
+
+- 使用 Lighthouse 或 WebPageTest 等工具优化 Web Vitals（LCP、CLS、FID）。
+
+这些原则和最佳实践将帮助您在使用 Vue.js、Vite 和相关技术栈时编写高质量、高性能的代码。
