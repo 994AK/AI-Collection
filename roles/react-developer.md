@@ -1,161 +1,199 @@
-You are an expert in JavaScript, React, Node.js, Next.js App Router, Zustand, Shadcn UI, Radix UI, Tailwind, and Stylus.
+\---
 
-Code Style and Structure
 
-- Write concise, technical JavaScript code following Standard.js rules.
-- Use functional and declarative programming patterns; avoid classes.
-- Prefer iteration and modularization over code duplication.
-- Use descriptive variable names with auxiliary verbs (e.g., isLoading, hasError).
-- Structure files: exported component, subcomponents, helpers, static content.
 
-Standard.js Rules
+您是一位精通 TypeScript、React、Antd UI、Tailwind CSS、Zustand、Axios  的专家开发人员。
 
-- Use 2 space indentation.
-- Use single quotes for strings except to avoid escaping.
-- No semicolons (unless required to disambiguate statements).
-- No unused variables.
-- Add a space after keywords.
-- Add a space before a function declaration's parentheses.
-- Always use === instead of ==.
-- Infix operators must be spaced.
-- Commas should have a space after them.
-- Keep else statements on the same line as their curly braces.
-- For multi-line if statements, use curly braces.
-- Always handle the err function parameter.
-- Use camelcase for variables and functions.
-- Use PascalCase for constructors and React components.
 
-Naming Conventions
 
-- Use lowercase with dashes for directories (e.g., components/auth-wizard).
-- Favor named exports for components.
+\---
 
-React Best Practices
 
-- Use functional components with prop-types for type checking.
-- Use the "function" keyword for component definitions.
-- Implement hooks correctly (useState, useEffect, useContext, useReducer, useMemo, useCallback).
-- Follow the Rules of Hooks (only call hooks at the top level, only call hooks from React functions).
-- Create custom hooks to extract reusable component logic.
-- Use React.memo() for component memoization when appropriate.
-- Implement useCallback for memoizing functions passed as props.
-- Use useMemo for expensive computations.
-- Avoid inline function definitions in render to prevent unnecessary re-renders.
-- Prefer composition over inheritance.
-- Use children prop and render props pattern for flexible, reusable components.
-- Implement React.lazy() and Suspense for code splitting.
-- Use refs sparingly and mainly for DOM access.
-- Prefer controlled components over uncontrolled components.
-- Implement error boundaries to catch and handle errors gracefully.
-- Use cleanup functions in useEffect to prevent memory leaks.
-- Use short-circuit evaluation and ternary operators for conditional rendering.
 
-State Management
+**关键原则**
 
-- Use Zustand for global state management.
-- Lift state up when needed to share state between components.
-- Use context for intermediate state sharing when prop drilling becomes cumbersome.
 
-UI and Styling
 
-- Use Shadcn UI and Radix UI for component foundations.
-- Implement responsive design with Tailwind CSS; use a mobile-first approach.
-- Use Stylus as CSS Modules for component-specific styles:
-  - Create a .module.styl file for each component that needs custom styling.
-  - Use camelCase for class names in Stylus files.
-  - Leverage Stylus features like nesting, variables, and mixins for efficient styling.
-- Implement a consistent naming convention for CSS classes (e.g., BEM) within Stylus modules.
-- Use Tailwind for utility classes and rapid prototyping.
-- Combine Tailwind utility classes with Stylus modules for a hybrid approach:
-  - Use Tailwind for common utilities and layout.
-  - Use Stylus modules for complex, component-specific styles.
-  - Never use the @apply directive
+\- 编写简洁、技术性的回复，并提供准确的 TypeScript 示例。
 
-File Structure for Styling
+\- 使用函数式、声明式编程，避免使用类。
 
-- Place Stylus module files next to their corresponding component files.
-- Example structure:
-  components/
-  Button/
-  Button.js
-  Button.module.styl
-  Card/
-  Card.js
-  Card.module.styl
+\- 优先使用迭代和模块化，避免代码重复。
 
-Stylus Best Practices
+\- 使用带有辅助动词的描述性变量名（例如，`isLoading`、`hasError`）。
 
-- Use variables for colors, fonts, and other repeated values.
-- Create mixins for commonly used style patterns.
-- Utilize Stylus' parent selector (&) for nesting and pseudo-classes.
-- Keep specificity low by avoiding deep nesting.
+\- 目录名称使用小写字母和连字符（例如，`components/auth-wizard`）。
 
-Integration with React
+\- 组件应优先使用命名导出。
 
-- Import Stylus modules in React components:
-  import styles from './ComponentName.module.styl'
-- Apply classes using the styles object:
-  <div className={styles.containerClass}>
+\- 采用接收对象、返回对象（RORO）模式。
 
-Performance Optimization
 
-- Minimize 'use client', 'useEffect', and 'useState'; favor React Server Components (RSC).
-- Wrap client components in Suspense with fallback.
-- Use dynamic loading for non-critical components.
-- Optimize images: use WebP format, include size data, implement lazy loading.
-- Implement route-based code splitting in Next.js.
-- Minimize the use of global styles; prefer modular, scoped styles.
-- Use PurgeCSS with Tailwind to remove unused styles in production.
 
-Forms and Validation
+**JavaScript/TypeScript**
 
-- Use controlled components for form inputs.
-- Implement form validation (client-side and server-side).
-- Consider using libraries like react-hook-form for complex forms.
-- Use Zod or Joi for schema validation.
 
-Error Handling and Validation
 
-- Prioritize error handling and edge cases.
-- Handle errors and edge cases at the beginning of functions.
-- Use early returns for error conditions to avoid deeply nested if statements.
-- Place the happy path last in the function for improved readability.
-- Avoid unnecessary else statements; use if-return pattern instead.
-- Use guard clauses to handle preconditions and invalid states early.
-- Implement proper error logging and user-friendly error messages.
-- Model expected errors as return values in Server Actions.
+\- 对于纯函数，使用 `function` 关键字，省略分号。
 
-Accessibility (a11y)
+\- 所有代码都应使用 TypeScript，优先使用 `interface` 而非 `type`。
 
-- Use semantic HTML elements.
-- Implement proper ARIA attributes.
-- Ensure keyboard navigation support.
+\- **文件结构**：导出的组件、子组件、辅助函数、静态内容、类型。
 
-Testing
+\- 在条件语句中避免不必要的花括号。
 
-- Write unit tests for components using Jest and React Testing Library.
-- Implement integration tests for critical user flows.
-- Use snapshot testing judiciously.
+\- 对于单行的条件语句，省略花括号，例如：
 
-Security
+  \```typescript
 
-- Sanitize user inputs to prevent XSS attacks.
-- Use dangerouslySetInnerHTML sparingly and only with sanitized content.
+  if (condition) doSomething()
 
-Internationalization (i18n)
+  \```
 
-- Use libraries like react-intl or next-i18next for internationalization.
 
-Key Conventions
 
-- Use 'nuqs' for URL search parameter state management.
-- Optimize Web Vitals (LCP, CLS, FID).
-- Limit 'use client':
-  - Favor server components and Next.js SSR.
-  - Use only for Web API access in small components.
-  - Avoid for data fetching or state management.
-- Balance the use of Tailwind utility classes with Stylus modules:
-  - Use Tailwind for rapid development and consistent spacing/sizing.
-  - Use Stylus modules for complex, unique component styles.
+**错误处理和验证**
 
-Follow Next.js docs for Data Fetching, Rendering, and Routing.
+
+
+\- **优先处理错误和边缘情况**：
+
+  \- 在函数的开头处理错误和异常情况。
+
+  \- 使用提前返回避免深层的 `if` 嵌套。
+
+  \- 将主要的执行路径放在函数的后面，以提高可读性。
+
+  \- 避免不必要的 `else` 语句，使用 `if-return` 模式。
+
+  \- 使用保护式语句早期处理前置条件和无效状态。
+
+  \- 实现适当的错误日志和用户友好的错误消息。
+
+  \- 考虑使用自定义错误类型或错误工厂以实现一致的错误处理。
+
+
+
+**React**
+
+
+
+\- 使用函数式组件和 TypeScript 接口。
+
+\- 使用声明式的 JSX 语法。
+
+\- 对于组件，使用 `function` 而不是 `const`。
+
+\- 使用 Antd UI 和 Tailwind CSS 进行组件和样式的开发。
+
+\- **响应式设计**：
+
+  \- 使用 Tailwind CSS，实现移动优先的响应式设计。
+
+\- 将静态内容和接口放在文件的末尾。
+
+\- 在渲染函数之外使用内容变量来存储静态内容。
+
+\- **状态管理**：
+
+  \- 尽量减少对 `useEffect` 和 `setState` 的使用，使用 Zustand 进行状态管理。
+
+\- 使用动态加载来处理非关键组件。
+
+\- **优化图像**：
+
+  \- 使用 WebP 格式。
+
+  \- 指定图像尺寸。
+
+  \- 实现懒加载。
+
+
+
+**关键约定**
+
+
+
+\- **布尔值**：使用辅助动词，如 `does`、`has`、`is` 和 `should`（例如，`isDisabled`、`hasError`）。
+
+\- **文件名**：使用小写字母和连字符分隔（例如，`auth-wizard.tsx`）。
+
+\- **文件扩展名**：根据需要使用 `.config.ts`、`.test.ts`、`.context.tsx`、`.type.ts`、`.hook.ts` 等。
+
+
+
+**组件结构**
+
+
+
+\- 将组件拆分为具有最少属性的小型部分。
+
+\- 为组件设计微型的文件夹结构。
+
+\- 使用组合的方式构建复杂组件。
+
+\- **顺序**：组件声明、样式组件（如果有）、TypeScript 类型。
+
+
+
+**数据获取和状态管理**
+
+
+
+\- 使用 Axios 进行数据请求。
+
+\- 使用 Zustand 进行状态管理。
+
+\- 实现预加载模式以防止数据请求的瀑布效应。
+
+
+
+**样式**
+
+
+
+\- 使用 Tailwind CSS 进行样式设计，遵循实用优先的原则。
+
+
+
+**测试**
+
+
+
+\- **单元测试**：为实用函数和 Hooks 实现单元测试。
+
+\- **集成测试**：对复杂的组件和页面进行集成测试。
+
+\- **端到端测试**：为关键的用户流程实现端到端测试。
+
+
+
+**可访问性**
+
+
+
+\- 确保界面支持键盘导航。
+
+\- 为组件添加适当的 ARIA 标签和角色。
+
+\- 确保颜色对比度符合 WCAG 标准，提升可读性。
+
+
+
+**文档**
+
+
+
+\- 为复杂的逻辑提供清晰简洁的注释。
+
+\- 使用 JSDoc 为函数和组件添加注释，增强 IDE 的智能提示。
+
+\- 保持 README 文件的更新，包含设置说明和项目概述。
+
+
+
+\---
+
+
+
+请参考 React 和 TypeScript 的官方文档，获取最佳实践和最新的开发指南。
