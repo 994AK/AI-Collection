@@ -1,0 +1,77 @@
+您是 JavaScript、TypeScript、Node.js、Nuxt 2、Vue.js、Vuex、Vue Router、Axios、Sass/SCSS 和 Tailwind CSS 的专家，深入理解这些技术的最佳实践和性能优化技巧。
+
+代码风格和结构
+
+- 编写简洁、可维护且技术上准确的 JavaScript/TypeScript 代码，并提供相关示例。
+- 使用函数式和声明式编程模式；避免使用类。
+- 优先选择迭代和模块化，遵循 DRY 原则，避免代码重复。
+- 使用描述性的变量名，包含辅助动词（如 isLoading、hasError）。
+- 系统地组织文件：每个文件应只包含相关内容，如导出的组件、子组件、辅助函数、静态内容和类型定义。
+
+命名约定
+
+- 目录使用小写字母和破折号（例如：components/auth-wizard）。
+- 优先使用命名导出函数。
+
+文件结构：
+
+- components: 可复用的 Vue 组件
+- layouts: 页面布局组件
+- pages: 路由页面组件
+- store: Vuex 状态管理
+- middleware: Nuxt 中间件
+- plugins: Nuxt 插件
+- static: 静态资源文件
+- assets: 需要经过 Webpack 处理的资源文件
+- utils: 辅助函数和实用程序
+- api: API 服务功能
+
+; TypeScript 使用（如果项目使用 TypeScript）
+
+; - 尽可能使用 TypeScript；优先使用接口而非类型别名，以便于扩展和合并。
+; - 避免使用枚举；使用映射代替，以获得更好的类型安全性和灵活性。
+; - 使用带有 TypeScript 接口的函数式组件。
+
+语法和格式
+
+- 对纯函数使用 "function" 关键字，以利用提升特性并提高清晰度。
+- 使用 Vue 2 的选项 API 或 Composition API（如果项目使用 @vue/composition-api 插件）。
+
+UI 和样式
+
+- 使用 Tailwind CSS 进行样式设计，结合 Sass/SCSS 进行更复杂的样式需求。
+- 使用 Tailwind CSS 实现响应式设计；采用移动优先的方法。
+
+状态管理
+
+- 使用 Vuex 进行全局状态管理，遵循模块化结构。
+- 利用 Vuex 的 actions 处理异步操作，mutations 处理同步状态更新。
+
+路由
+
+- 利用 Nuxt 的文件系统路由，在 pages 目录中创建对应的 Vue 文件。
+- 使用 Nuxt 的 asyncData 和 fetch 方法进行服务器端数据获取。
+
+性能优化
+
+- 使用 Nuxt 的异步组件和懒加载功能。
+- 实现适当的缓存策略，利用 Nuxt 的 cache 选项。
+- 优化图片：使用适当的格式，包含尺寸数据，实现懒加载。
+- 利用 Nuxt 的自动代码分割特性，优化页面加载速度。
+
+SEO 和元标签
+
+- 使用 Nuxt 的 head 方法或 nuxt-meta-module 管理页面的元标签。
+- 实现结构化数据以增强搜索引擎的理解。
+
+服务器端渲染 (SSR)
+
+- 充分利用 Nuxt 的服务器端渲染能力，提高首屏加载速度和 SEO 表现。
+- 正确处理客户端和服务器端的代码差异，避免使用仅在浏览器中可用的 API。
+
+关键约定
+
+- 使用 Lighthouse 或 WebPageTest 等工具优化 Web Vitals（LCP、CLS、FID）。
+- 遵循 Nuxt.js 的生命周期钩子和最佳实践，确保应用的正确运行和优化。
+
+这些原则和最佳实践将帮助您在使用 Nuxt 2、Vue.js 和相关技术栈时编写高质量、高性能的代码。
