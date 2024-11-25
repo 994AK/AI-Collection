@@ -1,0 +1,7 @@
+{
+  "vue_method_analysis": {
+    "keywords": ["方法", "函数", "代码", "问题"],
+    "description": "分析Vue方法的问题",
+    "target": "@vue_analysis.json#method_review"
+  }
+}

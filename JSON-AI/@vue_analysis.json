@@ -1,0 +1,27 @@
+{
+  "method_review": {
+    "check_points": [
+      {
+        "category": "状态管理",
+        "items": [
+          "检查状态标志的初始化",
+          "检查状态重置逻辑",
+          "检查状态转换的完整性"
+        ]
+      },
+      {
+        "category": "错误处理",
+        "items": ["检查异步操作的错误处理", "检查参数校验", "检查边界情况处理"]
+      },
+      {
+        "category": "代码优化",
+        "items": ["检查代码结构", "检查命名规范", "检查性能隐患"]
+      }
+    ],
+    "solution_template": {
+      "analysis": "分点列出主要问题",
+      "code_suggestion": "提供改进后的代码",
+      "improvement_summary": "总结主要改进点"
+    }
+  }
+}
